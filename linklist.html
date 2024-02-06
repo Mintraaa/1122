@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Drag and Drop Train Carriages</title>
+    <style>
+        #toolbar {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #eee;
+        }
+        .carriage {
+            display: inline-block; /* แสดงโบกี้ในแนวนอน */
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #000000;
+            background-color: #b0eaf6;
+            cursor: move;
+        }
+        #train {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #110c67;
+            min-height: 100px;
+            white-space: nowrap; /* ให้โบกี้ไม่ขึ้นบรรทัดใหม่ */
+            overflow-x: auto; /* เพิ่ม scrollbar แนวนอนถ้าจำเป็น */
+        }
+    </style>
+</head>
+<body>
+
+<div id="toolbar">
+    <button onclick="addCarriage()">เพิ่มโบกี้</button>
+    <a href="#" onclick="swapTrainOrder()">สลับลำดับ</a>
+</div>
+<div id="train">
+    <div class="carriage" draggable="true" id="carriage1">
+        <img src="./11.png" alt="รูปภาพของหัวขบวน">
+    </div>
+    <!-- โบกี้รถไฟจะถูกเพิ่มที่นี่ -->
+    <!-- โบกี้รถไฟจะถูกเพิ่มที่นี่ -->
+    <div class="carriage">
+        <img src="./11.png" alt="Train Carriage 1">
+    </div>
+    <div class="carriage">
+        <img src="./11.png" alt="Train Carriage 2">
+    </div>
+    <!-- เพิ่มรูประหว่างโบกี้ที่ 1 และ 2 -->
+    <img src="./11.png" alt="Train Carriage 3">
+</div>
+
+<script src="dragdrop.js"></script>
+</body>
+</html>
